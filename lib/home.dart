@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
@@ -55,10 +55,10 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           'Tic Tac Toe',
           style: kCustomText(
-              fontSize: 40.0, color: Colors.white, fontWeight: FontWeight.w800),
+              fontSize: 40.0, color: Colors.black, fontWeight: FontWeight.w800),
         ),
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           _buildPointsTable(),
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     'Player O',
                     style: kCustomText(
                         fontSize: 25.0,
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 138, 210, 236),
                         fontWeight: FontWeight.w800),
                   ),
                   const SizedBox(
@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     _scoreO.toString(),
                     style: kCustomText(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 138, 210, 236),
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold),
                   )
@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     'Player X',
                     style: kCustomText(
                         fontSize: 25.0,
-                        color: Colors.red,
+                        color: Color.fromARGB(255, 232, 162, 157),
                         fontWeight: FontWeight.w800),
                   ),
                   const SizedBox(
@@ -120,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     _scoreX.toString(),
                     style: kCustomText(
-                        color: Colors.red,
+                        color: Color.fromARGB(255, 232, 162, 157),
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold),
                   ),
@@ -148,13 +148,13 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: Container(
                 decoration:
-                    BoxDecoration(border: Border.all(color: Color.fromARGB(255, 181, 211, 234))),
+                    BoxDecoration(border: Border.all(color: Color.fromARGB(255, 66, 79, 88))),
                 child: Center(
                   child: Text(
                     _xOrOList[index],
                     style: TextStyle(
                       color:
-                          _xOrOList[index] == 'x' ? Colors.white : Colors.red,
+                          _xOrOList[index] == 'x' ? Color.fromARGB(255, 232, 162, 157) : Color.fromARGB(255, 138, 210, 236),
                       fontSize: 40,
                     ),
                   ),
@@ -172,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Center(
           child: Text(
             _turnOfO ? 'Turn of O' : 'Turn of X',
-            style: kCustomText(color: Colors.limeAccent),
+            style: kCustomText(color: Colors.black,)
           ),
         ),
       ),
